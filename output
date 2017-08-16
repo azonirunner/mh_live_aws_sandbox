@@ -1,0 +1,18 @@
+output "iam_roles" {
+  value = {
+    ecs_agent = "${module.media_role_and_policy.iam_role}"
+  }
+}
+
+output "iam_policies" {
+  value = {
+    ecs_agent = "${module.media_role_and_policy.iam_policy}"
+  }
+}
+
+output "iam_instance_profiles" {
+  value = {
+    ecs_agent = "${aws_iam_instance_profile.instance_profile.name}"
+  }
+}
+#module "service_role_and_policy" {
